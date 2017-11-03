@@ -1,1 +1,1 @@
-# simple blockchain
+# simple blockchain implemented using python
