@@ -2,7 +2,7 @@ import time
 import block
 import block_params
 
-
+# class for blockchain
 class BlockChain():
 
     def __init__(self):
@@ -10,7 +10,8 @@ class BlockChain():
 
     def latest_block(self):
         return self.blockchain_store[-1]
-
+    
+    # generating new block for adding onto blockchain
     def generate_next_block(self, data):
         index = len(self.blockchain_store)
         previous_hash = self.latest_block().hash
@@ -18,6 +19,7 @@ class BlockChain():
 
         params = block_params.BlockParams(index, previous_hash, timestamp, data)
         new_block = block.Block(params)
+        # adding the newly generated block to our blockchain
         self.blockchain_store.append(new_block)
 
     # @TODO mock implement
