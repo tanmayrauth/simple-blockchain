@@ -3,7 +3,7 @@ GENESIS_PREVIOUS_HASH = '0'
 GENESIS_TIMESTAMP = 1495851743
 GENESIS_DATA = 'first block'
 
-
+# this class will set block parameters
 class BlockParams():
 
     def __init__(self, index, previous_hash, timestamp, data):
